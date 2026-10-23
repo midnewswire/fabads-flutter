@@ -1,0 +1,25 @@
+name: fab_ads_yandex
+description: Yandex Ads for fab_ads. Android only; it runs the fabads-kotlin yandex module.
+version: 1.0.0
+publish_to: none
+repository: https://github.com/midnewswire/fabads-flutter
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fab_ads:
+    path: ../fab_ads
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.fabads.flutter.yandex
+        pluginClass: FabYandexPlugin

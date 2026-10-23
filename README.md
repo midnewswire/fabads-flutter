@@ -35,26 +35,29 @@ whose ad SDKs it found to break its policies, so a small, deliberate set is the 
 one network, or one main network plus one backup.
 
 The fab apps ship with AdMob only. To add a network, add its package to `pubspec.yaml` and its class to the list
-in `lib/config/ads.dart`. That is all: the admin panel then decides whether it runs, in what order, and with
+in `lib/config/ads.dart`. To remove AdMob, delete both of its lines the same way. That is all: the admin panel then decides whether it runs, in what order, and with
 which ad units.
 
 ## Install
 
-`pubspec.yaml`, the core package plus one entry per network, all at the same `ref`:
+`pubspec.yaml`, one entry per network, all at the same `ref`. Each network package brings `fab_ads` with it, so
+do not list `fab_ads` itself (pub would see two different copies of it):
 
 ```yaml
 dependencies:
-  fab_ads:
-    git:
-      url: https://github.com/midnewswire/fabads-flutter
-      path: packages/fab_ads
-      ref: 1.0.0
   fab_ads_admob:
     git:
       url: https://github.com/midnewswire/fabads-flutter
       path: packages/fab_ads_admob
       ref: 1.0.0
+  # fab_ads_applovin:
+  #   git:
+  #     url: https://github.com/midnewswire/fabads-flutter
+  #     path: packages/fab_ads_applovin
+  #     ref: 1.0.0
 ```
+
+Import a network package and you have the whole API: `import 'package:fab_ads_admob/fab_ads_admob.dart';`.
 
 AdMob and Ad Manager need your AdMob app id in `android/app/src/main/AndroidManifest.xml`:
 

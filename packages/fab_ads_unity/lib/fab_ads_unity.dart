@@ -4,6 +4,9 @@ import 'package:fab_ads/fab_ads.dart';
 import 'package:flutter/widgets.dart';
 import 'package:unity_ads_plugin/unity_ads_plugin.dart' as unity;
 
+/// Apps import only their network packages; each one brings the whole FabAds API.
+export 'package:fab_ads/fab_ads.dart';
+
 /// Unity Ads, on Android and iOS: banner, medium rectangle, interstitial and rewarded video.
 /// Needs `game_id` in the admin's unity settings (the Android or iOS game id). Units are Unity placement ids.
 class FabUnity extends FabNetwork {

@@ -4,6 +4,9 @@ import 'package:applovin_max/applovin_max.dart' as max;
 import 'package:fab_ads/fab_ads.dart';
 import 'package:flutter/widgets.dart';
 
+/// Apps import only their network packages; each one brings the whole FabAds API.
+export 'package:fab_ads/fab_ads.dart';
+
 /// AppLovin MAX, on Android and iOS: banner, medium rectangle, interstitial, rewarded and app open.
 /// Needs `sdk_key` in the admin's applovin settings. Units are MAX ad unit ids.
 class FabAppLovin extends FabNetwork {

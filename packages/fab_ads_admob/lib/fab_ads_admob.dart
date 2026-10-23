@@ -5,6 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+/// Apps import only their network packages; each one brings the whole FabAds API.
+export 'package:fab_ads/fab_ads.dart';
+
 /// AdMob, on Android and iOS. Also runs Google's consent form (UMP) for every network.
 ///
 /// Put your AdMob app id in AndroidManifest.xml (`com.google.android.gms.ads.APPLICATION_ID`) and Info.plist

@@ -1,0 +1,19 @@
+name: fab_ads_admob
+description: AdMob and Google Ad Manager for fab_ads, on Android and iOS, through google_mobile_ads.
+version: 1.0.0
+publish_to: none
+repository: https://github.com/midnewswire/fabads-flutter
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=3.38.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fab_ads:
+    path: ../fab_ads
+  google_mobile_ads: 9.2.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0

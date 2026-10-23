@@ -1,0 +1,56 @@
+group = "com.fabads.flutter.wortise"
+version = "1.0.0"
+
+buildscript {
+    ext.kotlin_version = "2.2.21"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.13.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = "https://jitpack.io" }
+        maven { url = "https://maven.wortise.com/artifactory/public" }
+        maven { url = "https://artifact.bytedance.com/repository/pangle" }
+        maven { url = "https://artifactory.bidmachine.io/bidmachine" }
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+android {
+    namespace = "com.fabads.flutter.wortise"
+    compileSdk = 36
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+    }
+
+    defaultConfig {
+        minSdk = 24
+    }
+}
+
+// The Wortise SDK needs Android 7.0 (API 24): set minSdk = 24 in the app.
+dependencies {
+    // fab_ads finds this module by itself and runs it. Keep in step with fab_ads' fabads-kotlin version.
+    api("com.github.midnewswire.fabads-kotlin:wortise:1.0.0")
+}

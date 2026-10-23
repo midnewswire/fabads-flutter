@@ -1,0 +1,26 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Analyze every package and the example
+        run: |
+          for dir in packages/*/ example/; do
+            echo "::group::$dir"
+            (cd "$dir" && flutter pub get && flutter analyze --fatal-infos) || exit 1
+            echo "::endgroup::"
+          done
+      - name: Test
+        working-directory: packages/fab_ads
+        run: flutter test

@@ -1,0 +1,19 @@
+name: fab_ads_applovin
+description: AppLovin MAX for fab_ads, on Android and iOS, through applovin_max.
+version: 1.0.0
+publish_to: none
+repository: https://github.com/midnewswire/fabads-flutter
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fab_ads:
+    path: ../fab_ads
+  applovin_max: 4.6.4
+
+dev_dependencies:
+  flutter_lints: ^5.0.0

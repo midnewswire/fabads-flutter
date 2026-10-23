@@ -1,0 +1,45 @@
+name: fab_ads_example
+description: Shows every FabAds format with test ads.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fab_ads_admob:
+    path: ../packages/fab_ads_admob
+  fab_ads_applovin:
+    path: ../packages/fab_ads_applovin
+  fab_ads_unity:
+    path: ../packages/fab_ads_unity
+  fab_ads_meta:
+    path: ../packages/fab_ads_meta
+  fab_ads_startio:
+    path: ../packages/fab_ads_startio
+  fab_ads_ironsource:
+    path: ../packages/fab_ads_ironsource
+  fab_ads_pangle:
+    path: ../packages/fab_ads_pangle
+  fab_ads_mintegral:
+    path: ../packages/fab_ads_mintegral
+  fab_ads_liftoff:
+    path: ../packages/fab_ads_liftoff
+  fab_ads_inmobi:
+    path: ../packages/fab_ads_inmobi
+  fab_ads_chartboost:
+    path: ../packages/fab_ads_chartboost
+  fab_ads_yandex:
+    path: ../packages/fab_ads_yandex
+  fab_ads_wortise:
+    path: ../packages/fab_ads_wortise
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/ads.json

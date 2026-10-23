@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:fab_ads/fab_ads.dart';
 import 'package:fab_ads_admob/fab_ads_admob.dart';
 import 'package:fab_ads_applovin/fab_ads_applovin.dart';
 import 'package:fab_ads_chartboost/fab_ads_chartboost.dart';

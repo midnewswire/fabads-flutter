@@ -9,8 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fab_ads:
-    path: ../packages/fab_ads
   fab_ads_admob:
     path: ../packages/fab_ads_admob
   fab_ads_applovin:

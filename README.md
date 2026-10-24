@@ -153,5 +153,6 @@ when a network has none.
 
 ## Releases
 
-Tag a version (`1.0.0`) and point the `ref` of every package at it. The Android only packages depend on the
-FabAds for Android release named in their `android/build.gradle`.
+Tag a version (`1.0.0`) and point the `ref` of every package at it. A commit id works as a `ref` too, and that is
+what the fab apps use until the first tag exists. The Android only packages depend on the FabAds for Android build
+named in their `android/build.gradle` (a JitPack tag or commit id); keep it in step with fabads-kotlin.

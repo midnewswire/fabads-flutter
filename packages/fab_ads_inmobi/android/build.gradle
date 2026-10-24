@@ -48,5 +48,5 @@ android {
 
 dependencies {
     // fab_ads finds this module by itself and runs it. Keep in step with fab_ads' fabads-kotlin version.
-    api("com.github.midnewswire.fabads-kotlin:inmobi:1.0.0")
+    api("com.github.midnewswire.fabads-kotlin:inmobi:b1db37155e")
 }
